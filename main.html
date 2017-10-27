@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>イベントタイマー</title>
+	<link rel="stylesheet" type="text/css" href="main.css">	
+</head>
+<body>
+	<div class="container border" id="container">
+			<div class="timer_icon">				
+				<p><span>
+					<svg class="title_circle">
+					    <circle cx="10" cy="10" r="10" fill="orange" id="title_circle"/>
+					</svg>					
+				</span>TIMER</p>
+			</div>
+			<div class="function_button">
+				<div class="button_box">
+					<button>__</button>
+					<button>&#9744;</button>
+					<button>X</button>
+				</div>
+			</div>
+			<div class="main border">
+					<center><svg class="main_circle">
+					    <circle cx="30" cy="30" r="30" fill="orange" id="main_circle"/>
+					</svg></center>
+					<div class="current_time center">時刻 : <span id="current_time">00:00:00</span></div>
+					<div class="selectime center">
+						<span>停止時刻</span>
+						<select class="h_start" id="h_start">
+						</select>
+						<span>時</span>
+						<select class="m_start" id="m_start">							
+						</select>
+						<span>分</span>
+						<span>~</span>
+						<select class="h_end" id="h_end">							
+						</select>
+						<span>時</span>
+						<select class="m_end" id="m_end">							
+						</select>
+						<span>分</span>
+						<input type="button" class="bt_break_time" id="bt_break_time" value="変更" onclick="timer.setBreakTime()" />
+					</div>
+					<div class="working_time center">
+						<p>稼働時間 : <span id="working_time">00:00:00</span></p>
+						<p>イベントクリック　: <span id="click_counter">0000</span> 回</p>
+					</div>
+					<div class="count_time center">
+						<p id="stop_watcher_time">00:00:00:00</p>
+						<div class="button_box">
+							<button id="btStart">START</button>
+							<button id="btStop">STOP</button>
+							<button id="btClear">CLEAR</button>
+							<button id="btCheck" hidden="hidden">CHECK</button>
+						</div>
+						<ul class="time_checked" id="time_checked">
+							<li id="timeChecked_1">00:00:00:00</li>
+							<li id="timeChecked_2">00:00:00:00</li>
+							<li id="timeChecked_3">00:00:00:00</li>					
+						</ul>
+					</div>
+			</div>
+	</div>	
+	<script src="main.js"></script>
+</body>
+</html>
