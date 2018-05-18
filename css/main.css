@@ -1,12 +1,16 @@
 body{
 	margin: 0;
 	padding: 0;
+	height: 100%;
 }
+
 
 .container{
 	margin: auto;
 	/*left: 35%;*/
 	width: 500px;
+	top: 150px;
+	left: 640px;
 	background-color: #e6eeff;
 	/*margin-top: 10%;*/
 	position: absolute;
@@ -50,4 +54,50 @@ body{
     margin: auto;    
     padding: 5px;
     text-align: center;
+}
+/*control button*/
+.minimize_box{
+	display: none;
+	right: 0;
+	position: fixed;
+    bottom: 0;
+    /*background-color: #e6eeff;*/
+    width: 130px;
+    height: 35px;
+}
+.button_box{
+    display: inline-flex;	
+}
+.btn-minimize{
+	background: url("../media/minimize.png") no-repeat;
+	background-size: 36px;
+	width: 36px;
+    height: 22px;
+    border: none;
+}
+.btn-minimize:hover{
+	background: url("../media/minimize_highlight.png") no-repeat;
+	background-size: 36px;
+}
+.btn-maxsize{
+	background: url("../media/maximize.png") no-repeat;
+	background-size: 36px;
+	width: 36px;
+    height: 22px;
+    border: none;
+}
+.btn-maxsize:hover{
+	background: url("../media/maximize_highlight.png") no-repeat;
+	background-size: 36px;
+}
+.btn-close{
+	background: url("../media/close.png") no-repeat;
+	background-size: 60px;
+	width: 60px;
+    height: 22px;
+    border: none;
+}
+.btn-close:hover{
+	background: url("../media/close_highlight.png") no-repeat;
+	background-size: 60px;
 }

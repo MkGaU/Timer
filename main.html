@@ -6,9 +6,16 @@
 	<script src="js/timer.js"></script>
 	<script src="js/stopwatcher.js"></script>
 	<script src="js/files.js"></script>
-	<script src="js/draggable.js"></script>
+	<script src="js/Coordinate.js"></script>
 </head>
 <body>
+	<div class="function_button minimize_box" id="minimize_box">
+				<div class="button_box">
+					<button id="maximize" class="btn-minimize"></button>
+					<button class="btn-maxsize"></button>
+					<button onclick="window.close()" class="btn-close"></button>
+				</div>
+	</div>
 	<div class="container border" id="container">
 		<div id="titleBox">
 			<div class="timer_icon">				
@@ -20,9 +27,9 @@
 			</div>
 			<div class="function_button">
 				<div class="button_box">
-					<button>__</button>
-					<button>&#9744;</button>
-					<button>X</button>
+					<button id="minimize" class="btn-minimize"></button>
+					<button class="btn-maxsize"></button>
+					<button onclick="window.close()" class="btn-close"></button>
 				</div>
 			</div>			
 		</div>
