@@ -8,4 +8,5 @@
  	timer.run();
  	stopWatcher.run();
  	file.run();//this function is not implemented
+ 	draggable.drag("container");
 };

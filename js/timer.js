@@ -32,8 +32,10 @@ var timer = {
         this._noActionTime++;
         timer.eventDetected();        
         var c = document.getElementById("main_circle");
+        var c2 = document.getElementById("title_circle");
         if (this._noActionTime >= 5) {
             c.setAttribute("fill", "red");
+            c2.setAttribute("fill", "red");
             timer._isClickCircleDetected = false;
             if (!this.checkBreakingTime()) {
                 timer.warningSound();
@@ -41,9 +43,11 @@ var timer = {
             // files.warningStartLog(this._currentTime);
         } else if (timer._isDetected && !timer._isClickCircleDetected) {
             c.setAttribute("fill", "yellow");
+            c2.setAttribute("fill", "yellow");
         }
         c.addEventListener("click", function() {
             c.setAttribute("fill", "orange");
+            c2.setAttribute("fill", "orange");
             timer._isClickCircleDetected = true;
         });
     },

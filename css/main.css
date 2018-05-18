@@ -5,10 +5,11 @@ body{
 
 .container{
 	margin: auto;
-	top: 50%;
+	/*left: 35%;*/
 	width: 500px;
 	background-color: #e6eeff;
-	margin-top: 10%;
+	/*margin-top: 10%;*/
+	position: absolute;
 }
 .main{
 	width: 460px;
