@@ -101,3 +101,6 @@ body{
 	background: url("../media/close_highlight.png") no-repeat;
 	background-size: 60px;
 }
+.btn_stopwatcher_box button {
+	width: 62px;
+}

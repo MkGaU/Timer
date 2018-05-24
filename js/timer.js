@@ -7,6 +7,8 @@
 var timer = {
     _noActionTime: 0, // The time have not action from mouse and keyboard
 
+    _noActionTimeLimits : 60, // The time limits have not action from mouse and keyboard (second)
+
     _isDetected: false, //Detect any action from mouse and keyboard
 
     _isWaringSoundAllow : true, //Allow warning sound play
@@ -33,7 +35,7 @@ var timer = {
         timer.eventDetected();        
         var c = document.getElementById("main_circle");
         var c2 = document.getElementById("title_circle");
-        if (this._noActionTime >= 5) {
+        if (this._noActionTime >= this._noActionTimeLimits) {
             c.setAttribute("fill", "red");
             c2.setAttribute("fill", "red");
             timer._isClickCircleDetected = false;
@@ -100,7 +102,7 @@ var timer = {
         var startMinute = sbStartMinute.options[sbStartMinute.selectedIndex].value;
         var endMinute = sbEndMinute.options[sbEndMinute.selectedIndex].value;
         if (this._startBreakingTime > this._endBreakingTime) {
-            alert("error");
+            alert("もう一回停止時刻を設定ください");
         } else {
             this._startBreakingTime = startHour + ":" + startMinute;
             this._endBreakingTime = endHour + ":" + endMinute;
