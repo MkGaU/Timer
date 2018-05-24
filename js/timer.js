@@ -7,7 +7,7 @@
 var timer = {
     _noActionTime: 0, // The time have not action from mouse and keyboard
 
-    _noActionTimeLimits : 60, // The time limits have not action from mouse and keyboard (second)
+    _noActionTimeLimits : 5, // The time limits have not action from mouse and keyboard (second)
 
     _isDetected: false, //Detect any action from mouse and keyboard
 
@@ -35,13 +35,13 @@ var timer = {
         timer.eventDetected();        
         var c = document.getElementById("main_circle");
         var c2 = document.getElementById("title_circle");
-        if (this._noActionTime >= this._noActionTimeLimits) {
+        if (this._noActionTime >= this._noActionTimeLimits && !this.checkBreakingTime()) {
             c.setAttribute("fill", "red");
             c2.setAttribute("fill", "red");
             timer._isClickCircleDetected = false;
-            if (!this.checkBreakingTime()) {
+            // if (!this.checkBreakingTime()) {
                 timer.warningSound();
-            }
+            // }
             // files.warningStartLog(this._currentTime);
         } else if (timer._isDetected && !timer._isClickCircleDetected) {
             c.setAttribute("fill", "yellow");
