@@ -9,16 +9,17 @@ var file = {
 	_logContents : [],
 
 	exportLog : function(){
-		var element = document.createElement('a');
-		  element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent("text"));
-		  element.setAttribute('download', "dkm.csv");
+		// var element = document.createElement('a');
+		//   element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent("text"));
+		//   element.setAttribute('download', "dkm.csv");
 
-		  element.style.display = 'none';
-		  document.body.appendChild(element);
+		//   element.style.display = 'none';
+		//   document.body.appendChild(element);
 
-		  element.click();
+		//   element.click();
 
-		  document.body.removeChild(element);
+		//   document.body.removeChild(element);
+		
 	},
 
 	actionDetectLog : function(){
@@ -32,6 +33,6 @@ var file = {
 	maxSize : function(){},
 
 	run : function(){
-				
+		file.exportLog();
 	}
 }
